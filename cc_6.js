@@ -11,3 +11,15 @@ function calculateProfit(costPrice, sellingPrice, unitsSold) { // Function Decla
 // Logging output 
 console.log(calculateProfit(20, 30, 100)); // Output: $1000
 console.log(calculateProfit(50, 70, 200)); // Output: $4000
+
+// Task 2: Function Expression
+console.log("\nTask 2- Function Expression");
+
+const calculateSalesTax = function(amount, taxRate) { // Calulating sales tax
+    const salesTax = amount * taxRate;
+    return `Sales Tax: $${salesTax}`;
+};
+
+// Logging output
+console.log(calculateSalesTax(100, 0.07));
+console.log(calculateSalesTax(500, 0.1));
