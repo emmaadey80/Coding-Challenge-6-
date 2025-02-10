@@ -68,3 +68,17 @@ return totalCost;
 // logging output of test data
 console.log(`Basic: $${calculateSubscriptionsCost("Basic", 6, 10)}`); // Logging output of basic subsription with 6 months and $10 discount
 console.log(`Premium: $${calculateSubscriptionsCost("Premium", 12, 0)}`); // Logging output of Premium subscription with 12 months and no discount
+
+// Task 5: Returning Values
+console.log("\nTask 5- Returning Values");
+
+const convertCurrency = function(amount, exchangeRate) { // Function to convert currency 
+const convertedAmount = (amount * exchangeRate).toFixed(2); 
+
+return convertedAmount;
+};
+
+// Logging output
+console.log(`Converted Currency 1: $${convertCurrency(100, 1.1)}`); // Logging converted currency of $100 with exchange rate of 1.1
+console.log(`Converted Currency 2: $${convertCurrency(250, 0.85)}`); // Logging converted currency of $250 with exchange rate of .85
+ 
