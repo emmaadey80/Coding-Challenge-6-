@@ -42,4 +42,29 @@ let calculateBonus = (salary, performanceRating) => {  // Arrow function calulat
 
 // Logging bonus calulations 
 console.log("Bonus: $", calculateBonus (5000, "Excellent")); // Bonus with "Excellent" rating and 5000 salary
-console.log("Bonus: $", calculateBonus (7000, "Good")); // Bonus with "Good" rating and 7000 salary 
+console.log("Bonus: $", calculateBonus (7000, "Good")); // Bonus with "Good" rating and 7000 salary
+
+// Task 4: Parameters and Arguments 
+console.log("\nTask 4- Parameters and Arguments");
+
+
+let calculateSubscriptionsCost = function(plan, months, discount=0) { // calulate subscription costs based on plan
+    let monthlyCost;
+    if (plan === "Basic") { // Basic plan is $10/ month
+        monthlyCost = 10;
+    } else if (plan === "Premium") { // Premium plan is $20/ month
+        monthlyCost = 20;
+    } else if (plan === "Enterprise") { // Enterprise plan is $50/ month
+        monthlyCost=50;
+    };
+
+let totalCost = monthlyCost * months; // Calculate total cost before discount
+
+totalCost = totalCost - discount; // Apply discount 
+
+return totalCost;
+}; 
+
+// logging output of test data
+console.log(`Basic: $${calculateSubscriptionsCost("Basic", 6, 10)}`); // Logging output of basic subsription with 6 months and $10 discount
+console.log(`Premium: $${calculateSubscriptionsCost("Premium", 12, 0)}`); // Logging output of Premium subscription with 12 months and no discount
